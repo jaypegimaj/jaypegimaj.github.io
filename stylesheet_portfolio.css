@@ -43,10 +43,10 @@ h1 {
 
 h3 {
    font-family: 'Carrois Gothic SC';
-   font-size:calc(25px + 1vw);
+   font-size:calc(50px + 1vw);
    border: 4px solid white;
    padding: 0.3em;
-   color: #444;
+   color: white;
    text-align: center;
    justify-content: center;
 }
@@ -62,7 +62,43 @@ h4 {
     font-family: 'Carrois Gothic SC';
     color: black;
     justify-content: center;
-   
+  }
+
+h5 {
+   font-size: 5em;
+    background: #969696;
+    font-family: 'Carrois Gothic SC';
+    color: black;
+    justify-content: center;
+    text-align: center;
+    display: block;
+}  
+
+   h6 {
+   font-family: 'Carrois Gothic SC';
+   font-size:calc(30px + 1.5vw);
+   border: 4px solid white;
+   padding: 0.3em;
+   color: white;
+    text-align: center;
+   justify-content: center;
+   position: relative;
+}
+
+.p2 {
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Josefin Sans';
+  display: block;
+}
+
+
+.buttonportfolio {
+    font-size: 1em;
+    background: #ffb747;
+    font-family: 'Carrois Gothic SC';
+    color: black;
+    opacity: 90%;
 }
 
 #top {
@@ -150,62 +186,11 @@ h4 {
 /* SIDE MENU */
 
 /* FLEXBOX */
+
 * {
   box-sizing: border-box;
 }
 
-.body2 {
-  margin: 0;
-  font-family: Arial;
-}
-
-.header2 {
-  text-align: center;
-  padding: 32px;
-}
-
-.row2 {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column2 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-
-.column2 img {
-  margin-top: 8px;
-  vertical-align: center;
-}
-
-
-
-/* FLEXBOX */
-
-
-<!DOCTYPE html>
-<html>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial;
-}
-
-.header {
-  text-align: center;
-  padding: 32px;
-}
 
 .row {
   display: -ms-flexbox; /* IE10 */
@@ -217,10 +202,10 @@ body {
 
 /* Create four equal columns that sits next to each other */
 .column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  max-width: 30%;
+  padding: 0px 8px;
 }
 
 .column img {
@@ -228,84 +213,180 @@ body {
   vertical-align: middle;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 1600px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
+.imagecontent {
+  padding: 0px 0px 0px 50px;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other 
-@media screen and (max-width: 1200px) {
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
   .column {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
   }
 }
-*/
+/* FLEXBOX */
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+a.lightbox img {
+
+box-shadow: 0px 0px 16px rgba(0,0,0,.3);
+margin: 12px 12px 12px 12px;
 }
 
-body {
-  margin: 40px;
-  font-family: 'Open Sans', 'sans-serif';
-  background-color: #fff;
-  color: #444;
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+.lightbox-target {
+position: fixed;
+top: -100%;
+width: 100%;
+background: rgba(0,0,0,.7);
+width: 100%;
+opacity: 0;
+-webkit-transition: opacity .5s ease-in-out;
+-moz-transition: opacity .5s ease-in-out;
+-o-transition: opacity .5s ease-in-out;
+transition: opacity .5s ease-in-out;
+overflow: hidden;
 }
 
-.wrapper {
-  max-width: 940px;
-  margin: 0 20px;
-  display: grid;
-  grid-gap: 10px;
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+
+.lightbox-target img {
+margin: auto;
+position: absolute;
+top: 0;
+left:0;
+right:0;
+bottom: 0;
+max-height: 0%;
+max-width: 0%;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+box-sizing: border-box;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
 }
 
+/* Styles the close link, adds the slide down transition */
 
-/* no grid support? */
-
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
+a.lightbox-close {
+display: block;
+width:50px;
+height:50px;
+box-sizing: border-box;
+background: white;
+color: black;
+text-decoration: none;
+position: absolute;
+top: -80px;
+right: 0;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
 }
 
-.wrapper {
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: minmax(150px, auto);
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:before {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
 }
 
-.panel {
-  /* needed for the flex layout*/
-  margin-left: 5px;
-  margin-right: 5px;
-  flex: 1 1 200px;
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:after {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
+transform:rotate(-45deg);
 }
 
-.header,
-.footer {
-  margin-left: 5px;
-  margin-right: 5px;
-  flex: 0 1 100%;
-  grid-column: 1 / -1;
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
 }
 
-.wrapper > * {
-  background-color: #444;
-  color: #fff;
+.lightbox-target:target img {
+max-height: 100%;
+max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+top: 0px;
+}
+
+/* CONTACT PAGE */
+
+.container2 {
   border-radius: 5px;
+  background-color: #bfbec7;
   padding: 20px;
-  font-size: 150%;
-  margin-bottom: 10px;
+  margin: 50px 150px;
+  justify-content: center;
 }
 
+input[type=text], select, textarea {
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100%; 
+  padding: 15px;
+  border: 1px solid #6f7956;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
 
-/* We need to set the margin used on flex items to 0 as we have gaps in grid.  */
+input[type=submit] {
+  background-color: #6f7956;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+}
 
+input[type=submit]:hover {
+  background-color: #a4a6d6;
+  }
+
+.buttontop {
+    background-color: #6f7956;
+    justify-content: center;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.buttontop:hover {
+  background-color: #a4a6d6;
+  }
