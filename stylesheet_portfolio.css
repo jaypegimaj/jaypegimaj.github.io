@@ -1,20 +1,14 @@
-
-/* The hero image */
-.hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+hero-image {
+  
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("assets/highwaytohill.jpg");
-
-  /* Set a specific height */
   height: 85%;
-
-  /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 
-/* Place text in the middle of the image */
+
 .hero-text {
   text-align: center;
   position: absolute;
@@ -83,6 +77,16 @@ h5 {
     text-align: center;
    justify-content: center;
    position: relative;
+}
+
+
+}
+.subheader {
+    color: black;
+}
+
+.p1{
+  color: gray;
 }
 
 .p2 {
@@ -154,16 +158,16 @@ h5 {
     transition: transform .5s, background-color .5s, color .5s;
 }
 
-/*the colors of the different columns*/
+
 .side-menu ul li:nth-child(1) { background-color: #c29c61;}
 .side-menu ul li:nth-child(2) { background-color: #e9be58;}
 .side-menu ul li:nth-child(3) { background-color: #ecc8a6;}
 .side-menu ul li:nth-child(4) { background-color: #d29b66;}
 
 .side-menu ul li:hover {
-    background-color: #9b533a; /*you can make different colors depending on the nth-child like above*/
+    background-color: #9b533a; 
     -webkit-transform: translateX(10em);
-    transform: translateX(14em);/*equal to left in the .side-menu*/
+    transform: translateX(14em);
 }
 .side-menu ul li a {
   display:block;
@@ -193,14 +197,14 @@ h5 {
 
 
 .row {
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox; 
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
   padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
+
 .column {
   -ms-flex: 30%; /* IE10 */
   flex: 30%;
@@ -218,7 +222,7 @@ h5 {
 }
 
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
   .column {
     -ms-flex: 100%;
@@ -234,7 +238,7 @@ box-shadow: 0px 0px 16px rgba(0,0,0,.3);
 margin: 12px 12px 12px 12px;
 }
 
-/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
 
 .lightbox-target {
 position: fixed;
@@ -250,7 +254,6 @@ transition: opacity .5s ease-in-out;
 overflow: hidden;
 }
 
-/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
 
 .lightbox-target img {
 margin: auto;
@@ -270,7 +273,6 @@ box-sizing: border-box;
 transition: .5s ease-in-out;
 }
 
-/* Styles the close link, adds the slide down transition */
 
 a.lightbox-close {
 display: block;
@@ -289,7 +291,6 @@ right: 0;
 transition: .5s ease-in-out;
 }
 
-/* Provides part of the "X" to eliminate an image from the close link */
 
 a.lightbox-close:before {
 content: "";
@@ -306,7 +307,6 @@ top:10px;
 transform:rotate(45deg);
 }
 
-/* Provides part of the "X" to eliminate an image from the close link */
 
 a.lightbox-close:after {
 content: "";
@@ -323,7 +323,6 @@ top:10px;
 transform:rotate(-45deg);
 }
 
-/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
 
 .lightbox-target:target {
 opacity: 1;
@@ -346,8 +345,20 @@ top: 0px;
   border-radius: 5px;
   background-color: #bfbec7;
   padding: 20px;
-  margin: 50px 150px;
+  margin: 50px 150px;  
   justify-content: center;
+}
+
+.container3 {
+  border-radius: 5px;
+  padding: 20px;
+  margin: 50px 150px;  
+  justify-content: center;
+}
+
+.introtext {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 input[type=text], select, textarea {
@@ -377,16 +388,17 @@ input[type=submit]:hover {
   }
 
 .buttontop {
-    background-color: #6f7956;
+    background-color: #d29b66;;
     justify-content: center;
   color: white;
-  padding: 12px 20px;
+  padding: 12px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
 }
 
-.buttontop:hover {
-  background-color: #a4a6d6;
+.buttontop:hover, a:active {
+  background-color: #9b533a;
   }
