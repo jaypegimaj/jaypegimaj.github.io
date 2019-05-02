@@ -7,7 +7,7 @@ let x, y;
   
 
 function setup() {
-  createCanvas(1080, 720);
+  createCanvas(window.innerWidth, window.innerHeight);
   // Starts in the middle
   x = width / 2;
   y = height;
